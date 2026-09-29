@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Checkout | Furbz Sparkle</title><link rel="stylesheet" href="assets/style.css"></head>
+<body>
+<header class="site-header"><a class="brand" href="index.html"><span>FURBZ</span><small>SPARKLE</small></a><a class="back" href="index.html">← Continue shopping</a></header>
+<main class="checkout section">
+  <div><p class="eyebrow">CHECKOUT</p><h1>Complete your order.</h1><p class="muted">Enter your details, review your order and upload your payment receipt.</p></div>
+  <div class="checkout-layout">
+    <form id="checkoutForm" class="panel">
+      <h3>Customer details</h3>
+      <input name="name" required placeholder="Full name">
+      <input name="phone" required placeholder="Phone number">
+      <input name="email" type="email" placeholder="Email address">
+      <textarea name="address" required placeholder="Delivery address"></textarea>
+      <select name="zone" id="zone" required><option value="">Select delivery zone</option></select>
+      <h3>Payment</h3>
+      <div class="payment-box"><strong>Moniepoint</strong><p>Account Name: Fatima Zahra Usman<br>Account Number: 7039997962</p><small>Make your transfer, then upload your receipt below.</small></div>
+      <label>Payment receipt <input id="receipt" type="file" accept="image/*"></label>
+      <button class="btn btn-gold full" type="submit">Place order & continue to WhatsApp</button>
+    </form>
+    <aside class="panel order-summary"><h3>Your order</h3><div id="checkoutItems"></div><div class="summary-line"><span>Subtotal</span><strong id="subTotal">₦0</strong></div><div class="summary-line"><span>Delivery</span><strong id="deliveryTotal">₦0</strong></div><div class="summary-line total"><span>Total</span><strong id="grandTotal">₦0</strong></div></aside>
+  </div>
+</main>
+<div id="toast" class="toast"></div><script src="assets/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="assets/supabase-config.js"></script><script src="assets/checkout.js"></script></body></html>
